@@ -10,39 +10,40 @@
     <link rel="stylesheet" href="./calc.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 p-4">
         <div class="inner">
-            <h3 class=" ms-5 pt-2">Calculator</h3>
-            <input type="text" name="" id="" class="form-control text-opacity-50" style="text-align: end;">
+            <h3 class=" ms-5 pt-2" style="color: aquamarine;">Calculator</h3>
+            <input id="result" type="text" name="" class="form-control text-opacity-50" style="text-align: end;">
             <div class="bttn pt-1 ">
-                <button type="button" class="btn btn-outline-secondary shadow">7</button>
-                <button type="button" class="btn btn-outline-secondary shadow">8</button>
-                <button type="button" class="btn btn-outline-secondary shadow">9</button>
-                <button type="button" class="btn btn-outline-warning shadow" style="width: 37px;">/</button>
+                <button onclick="displayData(7)" type="button" class="btn btn-outline-info">7</button>
+                <button onclick="displayData(8)" type="button" class="btn btn-outline-info">8</button>
+                <button onclick="displayData(9)" type="button" class="btn btn-outline-info">9</button>
+                <button onclick="displayData('/')" type="button" class="btn btn-outline-warning shadow" style="width: 37px;">/</button>
             </div>
             <div class="bttn pt-1">
-                <button type="button" class="btn btn-outline-secondary shadow">4</button>
-                <button type="button" class="btn btn-outline-secondary shadow">5</button>
-                <button type="button" class="btn btn-outline-secondary shadow">6</button>
-                <button type="button" class="btn btn-outline-warning shadow" style="width: 37px;">*</button>
+                <button onclick="displayData(4)" type="button" class="btn btn-outline-info">4</button>
+                <button onclick="displayData(5)" type="button" class="btn btn-outline-info">5</button>
+                <button onclick="displayData(6)" type="button" class="btn btn-outline-info">6</button>
+                <button onclick="displayData('*')" type="button" class="btn btn-outline-warning shadow" style="width: 37px;">*</button>
             </div>
             <div class="bttn pt-1">
-                <button type="button" class="btn btn-outline-secondary shadow">1</button>
-                <button type="button" class="btn btn-outline-secondary shadow">2</button>
-                <button type="button" class="btn btn-outline-secondary shadow">3</button>
-                <button type="button" class="btn btn-outline-warning shadow" style="width: 37px;">-</button>
+                <button onclick="displayData(1)" type="button" class="btn btn-outline-info">1</button>
+                <button onclick="displayData(2)" type="button" class="btn btn-outline-info">2</button>
+                <button onclick="displayData(3)" type="button" class="btn btn-outline-info">3</button>
+                <button onclick="displayData('-')" type="button" class="btn btn-outline-warning shadow" style="width: 37px;">-</button>
             </div>
             <div class="bttn pt-1">
-                <button type="button" class="btn btn-outline-secondary shadow" id="big">0</button>
-                <button type="button" class="btn btn-outline-secondary shadow">%</button>
-                <button type="button" class="btn btn-outline-warning shadow">+</button>
+                <button onclick="displayData(0)" type="button" class="btn btn-outline-info" id="big">0</button>
+                <button onclick="displayData('%')" type="button" class="btn btn-outline-info">%</button>
+                <button onclick="displayData('+')" type="button" class="btn btn-outline-warning shadow">+</button>
             </div>
             <div class="bttn pt-1">
-                <button type="button" class="btn btn-dark shadow" id="big">AC</button>
-                <button type="button" class="btn btn-dark shadow">C</button>
-                <button type="button" class="btn btn-outline-warning shadow">=</button>
+                <button onclick="allClear()" type="button" class="btn btn-dark" id="big">AC</button>
+                <button onclick="back()" type="button" class="btn btn-dark">&#9003;</button>
+                <button onclick="equalTo()" type="submit" class="btn btn-outline-warning shadow">=</button>
             </div>
         </div>
     </div>
 </body>
+<script src="./calc.js"></script>
 </html>
